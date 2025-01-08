@@ -12,15 +12,24 @@ button.addEventListener ('click', function (e) {
 function createTask () {
     const taskContainer = document.createElement("div")
     taskContainer.classList.add("taskContainer")
-    const header = document.createElement("div.header")
-    const title = document.createElement("h1.title")
-    const dueDate = document.createElement("div.dueDate")
-    const footer = document.createElement("div.footer")
-    const taskNotes = document.createElement("p.taskNotes")
-    const priority = document.createElement("div.priority")
+    const header = document.createElement("div")
+    header.classList.add("header")
+    const title = document.createElement("div")
+    const dueDate = document.createElement("div")
+    const footer = document.createElement("div")
+    footer.classList.add("footer")
+    const taskNotes = document.createElement("div")
+    const priority = document.createElement("div")
     const body = document.querySelector("body")
 
     body.appendChild(taskContainer)
+    taskContainer.appendChild(header)
+    header.appendChild(title)
+    header.appendChild(dueDate)
+    taskContainer.appendChild(footer)
+    footer.appendChild(taskNotes)
+    footer.appendChild(priority)
+
 }
 
     let walk = new Task('walk')

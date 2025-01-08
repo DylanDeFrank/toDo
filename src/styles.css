@@ -7,4 +7,25 @@
     border: 2px, solid, black;
     width: 500px;
     height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    border-bottom: 2px solid black;
+    flex: 1;
+    display: flex;
+}
+.header>div {
+    flex: 1;
+    border: 2px solid black;
+}
+
+.footer {
+    flex: 1;
+    display: flex;
+}
+.footer>div {
+    flex: 1;
+    border: 2px solid black;
 }
