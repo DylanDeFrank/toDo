@@ -1,36 +1,31 @@
 import { Task } from "./task.js"
 import { List } from "./list.js"   
-import "./styles.css"     
+import "./styles.css" 
+import { createTask } from "./taskcontainer.js"    
 
 const button = document.querySelector('.addTask')
+const titleText = document.querySelector(".title")
 
 button.addEventListener ('click', function (e) {
     createTask()
+    titleText.addEventListener ('keydown', function (e) {
+        let key = key.e
+        if (key.e == 'Shift') {
+        let task = new Task(titleText.textContent)
+        return task
+        }
+    
+    })
+    
+    
+    
+    
 
     
 })
-function createTask () {
-    const taskContainer = document.createElement("div")
-    taskContainer.classList.add("taskContainer")
-    const header = document.createElement("div")
-    header.classList.add("header")
-    const title = document.createElement("div")
-    const dueDate = document.createElement("div")
-    const footer = document.createElement("div")
-    footer.classList.add("footer")
-    const taskNotes = document.createElement("div")
-    const priority = document.createElement("div")
-    const body = document.querySelector("body")
 
-    body.appendChild(taskContainer)
-    taskContainer.appendChild(header)
-    header.appendChild(title)
-    header.appendChild(dueDate)
-    taskContainer.appendChild(footer)
-    footer.appendChild(taskNotes)
-    footer.appendChild(priority)
 
-}
+
 
     let walk = new Task('walk')
     console.log(walk.name)
