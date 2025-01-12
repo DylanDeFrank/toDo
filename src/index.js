@@ -4,27 +4,18 @@ import "./styles.css"
 import { createTask } from "./taskcontainer.js"    
 
 const button = document.querySelector('.addTask')
-const titleText = document.querySelector(".title")
 
 button.addEventListener ('click', function (e) {
     createTask()
-    titleText.addEventListener ('keydown', function (e) {
-        let key = key.e
-        if (key.e == 'Shift') {
-        let task = new Task(titleText.textContent)
-        return task
+    const title = document.querySelector('.title')
+    title.addEventListener ('keydown', function (e) {
+        if (e.key == 'Enter') {
+        let task = new Task(title.textContent)
+        console.log(task.name)
         }
     
     })
-    
-    
-    
-    
-
-    
 })
-
-
 
 
     let walk = new Task('walk')
@@ -42,3 +33,6 @@ button.addEventListener ('click', function (e) {
     let list2 = new List('list2')
     list2.addTask(shop)
     console.log(list2.showList())
+
+
+
