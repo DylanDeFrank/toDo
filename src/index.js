@@ -1,12 +1,13 @@
 import { Task } from "./task.js"
 import { List } from "./list.js"   
-import "./styles.css" 
-import { createTask } from "./taskcontainer.js"    
+import "./styles.css"    
 
 const button = document.querySelector('.addTask')
+const taskWrapper = document.querySelector(".taskWrapper")
 
 button.addEventListener ('click', function (e) {
-    createTask()
+  
+    taskWrapper.style.display = "flex"
     const title = document.querySelector('.title')
     title.addEventListener ('keydown', function (e) {
         if (e.key == 'Enter') {
