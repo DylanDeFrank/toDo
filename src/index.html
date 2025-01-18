@@ -5,23 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskMaster</title>
 </head>
-
-<div class="addTaskContainer">
-    <button class="addTask"><img src="./images/plus.svg"></button>
-    <p>Click to add a task</p>
-</div>
-</div>
-<div class="taskWrapper">
+<div class="taskWrapper" >
     <div class="header">
-        <div class="title"></div>
-        <div class="dueDate"></div>
+        <div class="title">
+            <h1>Task</h1>
+            <input placeholder="Enter a task" type="text" class="taskName" name="taskName">
+        </div>
+        <div class="dueDate">
+            <h1>Date</h1>
+            <input type="datetime-local" class="dateTime">
+        </div>
     </div>
     <div class="footer">
-        <div class="taskNotes"></div>
-        <div class="priority"></div>
+        <div class="taskNotes">
+            <h1>Notes</h1>
+            <textarea class="details" placeholder="Enter details here">
+            </textarea>
+        </div>
+        <div class="priority">
+            <h1>Priority</h1>
+            <input type="radio" name="low" id="low" >
+            <label for="low">Low</label><br>
+            <input type="radio" name="med" id="med">
+            <label for="med">Medium</label>
+            <input type="radio" name="high" id="high">
+            <label for="high">High</label>
+        </div>
+    </div>
+    <div class="addTaskContainer">
+        <button class="addTask"><img src="./images/plus.svg"></button>
+        <p>Enter task info, then click here to add it to a list</p>
     </div>
 </div>
 
+<div class="listWrapper"></div>
 <body>
     
 </body>

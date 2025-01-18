@@ -2,21 +2,18 @@ import { Task } from "./task.js"
 import { List } from "./list.js"   
 import "./styles.css"    
 
-const button = document.querySelector('.addTask')
-const taskWrapper = document.querySelector(".taskWrapper")
+const taskButton = document.querySelector(".addTask")
+const name = document.querySelector(".taskName")
+const details = document.querySelector(".details")
+const date = document.querySelector(".dateTime")
 
-button.addEventListener ('click', function (e) {
-  
-    taskWrapper.style.display = "flex"
-    const title = document.querySelector('.title')
-    title.addEventListener ('keydown', function (e) {
-        if (e.key == 'Enter') {
-        let task = new Task(title.textContent)
-        console.log(task.name)
-        }
-    
-    })
-})
+
+taskButton.addEventListener ('click', () => {
+   let task = new Task(name.value, details.value, date.value )
+    console.log(task)
+            
+
+ })
 
 
     let walk = new Task('walk')
