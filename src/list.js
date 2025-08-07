@@ -1,11 +1,11 @@
 export class List {
-    constructor() {
-        this.list = []
-    }
-    addTask(task) {
-        this.list.push(task)
-    }
-    showList() {
-        return (this.list)
-    }
+  constructor() {
+    this.tasks = [];
+  }
+
+  addTask(task) {
+    this.tasks.push(task);
+    console.log(this.tasks)
+    return this.tasks;
+  }
 }
