@@ -1,14 +1,10 @@
 export class Display {
-    constructor(list) {
-        this.list = list
+    constructor() {
+        this.listWrapper = document.querySelector(".listWrapper")
     }
-    addDisplay(taskList) {
-        for(let [key,value] of Object.entries(taskList)) {
-            for(let details of value) {
-                for (let [x,y] of Object.entries(details)){
-                    console.log(x,y)
-                }
-            }
+    addDisplay(task) {
+        const div = document.createElement("div")
+        this.listWrapper.appendChild(div)
+              
         }
-    }
 }
