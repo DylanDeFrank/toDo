@@ -2,6 +2,8 @@ import { Task } from "./task.js"
 import { List } from "./list.js"  
 import { Display } from "./display.js" 
 import "./styles.css"    
+import { differenceInDays, formatDistanceToNow } from "date-fns"
+
 
 const taskButton = document.querySelector(".addTask")
 const name = document.querySelector(".taskName")
@@ -18,10 +20,15 @@ let displayList = new Display()
 
 
 taskButton.addEventListener ('click', () => {
-   let task = new Task(name.value, details.value, date.value)
+  const result = formatDistanceToNow (
+  new Date(date.value)
+)
+
+   let task = new Task(name.value, details.value, result)
    console.log(task)
    taskList.addTask(task)
    displayList.addDisplay(task)
+
    
 
  })
