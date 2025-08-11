@@ -1,3 +1,5 @@
+import flatpickr from "flatpickr"
+import 'flatpickr/dist/flatpickr.min.css'
 import { Task } from "./task.js"
 import { List } from "./list.js"  
 import { Display } from "./display.js" 
@@ -8,8 +10,9 @@ import { differenceInDays, formatDistanceToNow } from "date-fns"
 const taskButton = document.querySelector(".addTask")
 const name = document.querySelector(".taskName")
 const details = document.querySelector(".details")
-const date = document.querySelector(".dateTime")
+const date = document.querySelector("#dateTime")
 const listWrapper = document.querySelector(".listWrapper")
+flatpickr(date, {})
 
 let taskList = new List()
 let displayList = new Display()
